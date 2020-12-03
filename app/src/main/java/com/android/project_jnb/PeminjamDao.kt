@@ -15,11 +15,11 @@ interface PeminjamDao {
 
     @Query("SELECT * FROM customer WHERE nama LIKE :nama AND " +
             "petugas LIKE :petugas LIMIT 1")
-    fun findByName(nama: String, penjual: String): Peminjam
+    fun findByName(nama: String, petugasperpus: String): Peminjam
 
     @Insert
-    fun insertAll(vararg customer: Peminjam)
+    fun insertAll(vararg peminjam: Peminjam)
 
     @Delete
-    fun delete(customer: Peminjam)
+    fun delete(peminjam: Peminjam)
 }
